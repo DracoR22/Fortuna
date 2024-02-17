@@ -19,8 +19,16 @@ const CreateNoteDialog = (props: Props) => {
     const router = useRouter()
 
     const [input, setInput] = useState<string>('')
+    
+    const { mutate: uploadToFirebaseMutation } = useMutation({
+        mutationFn: async (noteId: string) => {
+            const response = await axios.post('/api/upload-to-firebase', { noteId })
 
-    const { mutate, isPending } = useMutation({
+            return response.data
+        }
+    })
+
+    const { mutate: createNotebookMutation, isPending } = useMutation({
         mutationFn: async () => {
             const response = await axios.post('/api/create-notebook', { name: input })
             return response.data
@@ -35,10 +43,14 @@ const CreateNoteDialog = (props: Props) => {
             return
         }
 
-        mutate(undefined, {
+        createNotebookMutation(undefined, {
             onSuccess: ({ note_id }) => {
                 toast.success('Project created!')
+
+                // Upload the image to firebase
+                uploadToFirebaseMutation(note_id)
                 router.push(`/notebook/${note_id}`)
+                router.refresh()
             },
             onError: (error) => {
                 toast.error('Something went wrong. Please try again later.')
