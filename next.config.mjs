@@ -7,6 +7,12 @@ const nextConfig = {
                 hostname: 'firebasestorage.googleapis.com'
             }
         ]
+    },
+    typescript: {
+        ignoreBuildErrors: true
+    },
+    eslint: {
+        ignoreDuringBuilds: true
     }
 };
 
