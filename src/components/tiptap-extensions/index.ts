@@ -22,7 +22,7 @@ export const PlaceholderExtension = Placeholder.configure({
       if (node.type.name === "heading") {
         return `Heading ${node.attrs.level}`;
       }
-      return "Start writting here, press ++ for AI completion";
+      return "Start writting here, press Shift + a for AI completion";
     },
     includeChildren: true,
   });
