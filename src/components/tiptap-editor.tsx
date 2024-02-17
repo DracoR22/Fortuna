@@ -81,7 +81,7 @@ const TiptapEditor = ({ note }: Props) => {
         })
     }, [debounce])
 
-
+    // UPDATE THE EDITOR CONTENT WITH THE AI COMPLETION
     useEffect(() => {
         if (!editor || !completion) return
        // Get individual word to insert to the editor
@@ -101,7 +101,7 @@ const TiptapEditor = ({ note }: Props) => {
           <div className="flex">
              {editor && <TiptapMenubar editor={editor}/>}
           </div>
-          <div className="mt-8 prose">
+          <div className="mt-8 prose w-full">
              <EditorContent editor={editor} className="h-[500px]"/>
           </div>
         </>
