@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<a href="https://fortuna-self.vercel.app">
+  <img src="/public/fortunaA.png">
+  <h1 align="center">Fortuna ✨</h1>
+</a>
 
-## Getting Started
+<p align="center">
+  The ultimate AI-powered writing tool with Notion-style Drag and Drop Text Editor and auto completion
+</p>
 
-First, run the development server:
+### 💡 Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- ✨ AI Auto-completion: Leverages advanced AI algorithms to predict and complete your text as you type.
+- 📝 Drag and Drop Notion-style Text Editor: Intuitive and flexible text editor allowing for easy organization and formatting of your content.
+- 💾 Real-time Saving: Automatically saves your progress to prevent data loss.
+- 🌐 Cross-platform Compatibility: Accessible on multiple devices ensuring you can write anywhere, anytime.
+- 📚 Document Management: Organize your writing projects with a user-friendly document management system.
+- 🔒 Secure Authentication: Secure login and data protection to keep your work safe.
+- 🚀 High Performance: Fast and responsive user interface for a seamless writing experience.
+
+### 🔧 Tech Stack
+
+- ⚛️ Next.js: React-based framework for building server-side rendered and statically generated web applications.
+- 🐘 PostgreSQL: Robust, scalable, and SQL-compliant relational database management system.
+- 🌿 DrizzleORM: TypeScript ORM for SQL databases, providing a type-safe and fluent API for database operations.
+- 🔗 API Integration: Integration with OpenAI API for the AI completion functionality.
+- 🎉 Tailwind CSS: Utility-first CSS framework for rapid UI development.
+- 🔄 Vercel: Deployment and hosting platform optimized for Next.js applications.
+- ⚡ TypeScript: Strongly typed programming language that builds on JavaScript, ensuring reliability and scalability.
+
+### The Editor:
+<img src="/public/fortunab.png">
+
+
+### Prerequisites
+
+**Node version 14.x**
+
+### Cloning the repository
+
+```shell
+git clone https://github.com/DracoR22/Finuva
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install packages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Setup .env file
 
-## Learn More
+```js
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 
-To learn more about Next.js, take a look at the following resources:
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+DATABASE_URL=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+OPENAI_API_KEY=
 
-## Deploy on Vercel
+FIREBASE_API_KEY=
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Make sure you have this line in the tailwind.config file
+```js
+plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Start the app
+
+```shell
+pnpm dev
+```
+
+## Available commands
+
+Running commands with npm `pnpm [command]`
+
+| command | description                              |
+| :------ | :--------------------------------------- |
+| `dev`   | Starts a development instance of the app |
+| `build` | Build project                            |
+| `lint`  | Check lint for project                   |
