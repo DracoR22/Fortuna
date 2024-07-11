@@ -38,7 +38,7 @@
 ### Cloning the repository
 
 ```shell
-git clone https://github.com/DracoR22/Finuva
+git clone https://github.com/DracoR22/Fortuna
 ```
 
 ### Install packages
