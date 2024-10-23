@@ -1,5 +1,5 @@
 <a href="https://fortuna-self.vercel.app">
-  <img src="/public/fortunaA.png">
+  <img src="/public/fortunab.png">
   <h1 align="center">Fortuna ✨</h1>
 </a>
 
@@ -26,10 +26,6 @@
 - 🎉 Tailwind CSS: Utility-first CSS framework for rapid UI development.
 - 🔄 Vercel: Deployment and hosting platform optimized for Next.js applications.
 - ⚡ TypeScript: Strongly typed programming language that builds on JavaScript, ensuring reliability and scalability.
-
-### The Editor:
-<img src="/public/fortunab.png">
-
 
 ### Prerequisites
 
